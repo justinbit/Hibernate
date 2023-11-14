@@ -80,7 +80,9 @@ public class CustomPersistenceUnitInfo implements PersistenceUnitInfo {
 
     @Override
     public Properties getProperties() {
-        return null;
+        Properties properties = new Properties();
+        properties.setProperty("hibernate.show_sql", "true");
+        return properties;
     }
 
     @Override
